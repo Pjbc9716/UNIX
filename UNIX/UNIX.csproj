@@ -133,31 +133,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Person.cs">
-      <DependentUpon>Person_DB_Model.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Person_DB_Model.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Person_DB_Model.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Person_DB_Model.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Person_DB_Model.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Person_DB_Model.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Person_DB_Model.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\UNIX_DB.mdf" />
-    <Content Include="App_Data\UNIX_DB_log.ldf">
-      <DependentUpon>UNIX_DB.mdf</DependentUpon>
-    </Content>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -166,25 +144,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Models\Person_DB_Model.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Person_DB_Model.Context.cs</LastGenOutput>
-      <DependentUpon>Person_DB_Model.edmx</DependentUpon>
-    </Content>
-    <Content Include="Models\Person_DB_Model.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Person_DB_Model.edmx</DependentUpon>
-      <LastGenOutput>Person_DB_Model.cs</LastGenOutput>
-    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <EntityDeploy Include="Models\Person_DB_Model.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Person_DB_Model.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\Person_DB_Model.edmx.diagram">
-      <DependentUpon>Person_DB_Model.edmx</DependentUpon>
-    </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -209,7 +170,10 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Person\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
